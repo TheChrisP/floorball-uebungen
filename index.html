@@ -31,7 +31,11 @@
   .card:hover .btn { background: #fff; }
   footer { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 12px; display: flex; justify-content: space-between; }
 </style>
-<script defer src="/_vercel/insights/script.js"></script>
+<script>(function () { try {
+  var q = location.search; if (/nicht-zaehlen/.test(q)) localStorage.setItem("noCount", "1"); else if (/[?&]zaehlen/.test(q)) localStorage.removeItem("noCount");
+  if (localStorage.getItem("noCount")) return;
+} catch (e) {}
+var s = document.createElement("script"); s.defer = true; s.src = "/_vercel/insights/script.js"; document.head.appendChild(s); })();</script>
 </head>
 <body>
 <div class="wrap">
