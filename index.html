@@ -39,7 +39,7 @@
   <h1>Übungen <b>//</b> als PDF</h1>
   <p class="lead">Jede Übung aus den Reels als Übungsblatt zum Ausdrucken: Aufbau, Ablauf, Tipps und Steigerung. Kostenlos für Trainer und Übungsleiter.</p>
   <div class="grid">
-  <a class="card" href="dl/005-passquadrat.html">
+  <a class="card" href="pdf/005-passquadrat.pdf" target="_blank" rel="noopener" data-count="dl/005-passquadrat.html">
     <img src="img/005-passquadrat.png" alt="Übungsblatt Passquadrat mit Nachlaufen" loading="lazy">
     <div class="meta">
       <div class="mono">#005 // Aufwärmen / Alle Niveaus</div>
@@ -48,7 +48,7 @@
       <span class="btn">PDF laden</span>
     </div>
   </a>
-  <a class="card" href="dl/004-eins-gegen-eins.html">
+  <a class="card" href="pdf/004-eins-gegen-eins.pdf" target="_blank" rel="noopener" data-count="dl/004-eins-gegen-eins.html">
     <img src="img/004-eins-gegen-eins.png" alt="Übungsblatt 1 gegen 1 aufs Tor" loading="lazy">
     <div class="meta">
       <div class="mono">#004 // Kinder / Jugend</div>
@@ -57,7 +57,7 @@
       <span class="btn">PDF laden</span>
     </div>
   </a>
-  <a class="card" href="dl/003-rueckpass-direktschuss.html">
+  <a class="card" href="pdf/003-rueckpass-direktschuss.pdf" target="_blank" rel="noopener" data-count="dl/003-rueckpass-direktschuss.html">
     <img src="img/003-rueckpass-direktschuss.png" alt="Übungsblatt Rückpass und Direktschuss" loading="lazy">
     <div class="meta">
       <div class="mono">#003 // Jugend / Fortgeschrittene</div>
@@ -66,7 +66,7 @@
       <span class="btn">PDF laden</span>
     </div>
   </a>
-  <a class="card" href="dl/002-slalom-dribbling.html">
+  <a class="card" href="pdf/002-slalom-dribbling.pdf" target="_blank" rel="noopener" data-count="dl/002-slalom-dribbling.html">
     <img src="img/002-slalom-dribbling.png" alt="Übungsblatt Slalom-Dribbling mit Torschuss" loading="lazy">
     <div class="meta">
       <div class="mono">#002 // Kinder / Anfänger</div>
@@ -75,7 +75,7 @@
       <span class="btn">PDF laden</span>
     </div>
   </a>
-  <a class="card" href="dl/001-doppelpass.html">
+  <a class="card" href="pdf/001-doppelpass.pdf" target="_blank" rel="noopener" data-count="dl/001-doppelpass.html">
     <img src="img/001-doppelpass.png" alt="Übungsblatt Doppelpass mit Torabschluss" loading="lazy">
     <div class="meta">
       <div class="mono">#001 // Anfänger / Fortgeschrittene</div>
@@ -87,5 +87,12 @@
   </div>
   <footer class="mono"><span>Übung des Tages</span><span>@floorball_uebungen</span></footer>
 </div>
+<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("a[data-count]"); if (!a) return;
+  var f = document.createElement("iframe"); f.hidden = true; f.src = a.dataset.count;
+  document.body.appendChild(f); setTimeout(function () { f.remove(); }, 8000);
+});
+</script>
 </body>
 </html>
